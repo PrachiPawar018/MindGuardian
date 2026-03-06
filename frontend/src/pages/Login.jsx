@@ -232,8 +232,8 @@ const Login = () => {
             style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}
           >
             <img
-              src="/mindpulse-logo.png"
-              alt="MindPulse Logo"
+              src="/MindGuardian_Logo.png"
+              alt="MindGuardian Logo"
               style={{
                 height: '60px',
                 width: 'auto',

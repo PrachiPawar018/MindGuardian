@@ -10,7 +10,7 @@ const PageWrapper = ({ title, description, children, showScrollProgress = true }
   return (
     <>
       <Helmet>
-        <title>{title} | MindPulse</title>
+        <title>{title} | MindGuardian</title>
         <meta name="description" content={description} />
       </Helmet>
       

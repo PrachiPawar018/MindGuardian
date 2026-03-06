@@ -149,7 +149,7 @@ const Home = () => {
                             backgroundClip: "text",
                         }}
                     >
-                        MindPulse
+                        MindGuardian
                     </motion.h1>
 
                     <motion.h2
@@ -457,7 +457,7 @@ const Home = () => {
                     }}
                 >
                     <h2 style={{ fontSize: "2rem", marginBottom: "2rem", fontWeight: 700 }}>
-                        Why Choose MindPulse?
+                        Why Choose MindGuardian?
                     </h2>
 
                     <motion.div
@@ -547,7 +547,7 @@ const Home = () => {
                             lineHeight: 1.7,
                         }}
                     >
-                        Join thousands of users who are taking control of their mental health with MindPulse. Small daily reflections create meaningful, lasting change.
+                        Join thousands of users who are taking control of their mental health with MindGuardian. Small daily reflections create meaningful, lasting change.
                     </p>
 
                     <motion.button
@@ -585,7 +585,7 @@ const Home = () => {
                             fontWeight: 700,
                         }}
                     >
-                        How MindPulse Works
+                        How MindGuardian Works
                     </motion.h2>
 
                     <motion.div
@@ -689,7 +689,7 @@ const Home = () => {
                             fontWeight: 700,
                         }}
                     >
-                        What Makes MindPulse Different
+                        What Makes MindGuardian Different
                     </motion.h2>
 
                     <motion.div
@@ -784,7 +784,7 @@ const Home = () => {
                             {
                                 name: "Sarah M.",
                                 role: "Student",
-                                quote: "MindPulse helped me understand my anxiety patterns. The insights are incredibly accurate and the AI chatbot is like having a friend available 24/7.",
+                                quote: "MindGuardian helped me understand my anxiety patterns. The insights are incredibly accurate and the AI chatbot is like having a friend available 24/7.",
                                 avatar: "SM",
                             },
                             {

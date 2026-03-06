@@ -118,8 +118,8 @@ const Register = () => {
             style={{ marginBottom: '1rem', display: 'inline-flex' }}
           >
             <img
-              src="/mindpulse-logo.png"
-              alt="MindPulse Logo"
+              src="/MindGuardian_Logo.png"
+              alt="MindGuardian Logo"
               style={{ height: '60px', width: 'auto', borderRadius: '8px' }}
               onError={(e) => { e.target.style.display = 'none'; }}
             />

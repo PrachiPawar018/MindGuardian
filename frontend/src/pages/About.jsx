@@ -15,7 +15,7 @@ const About = () => {
   };
 
   return (
-    <PageWrapper title="About Us" description="Learn about MindPulse, our mission to support student mental wellness, and the team behind it.">
+    <PageWrapper title="About Us" description="Learn about MindGuardian, our mission to support student mental wellness, and the team behind it.">
       <div className="container py-12">
         {/* Hero Section */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -28,7 +28,7 @@ const About = () => {
             Empowering Student Minds
           </motion.h1>
           <p className="text-xl text-muted">
-            MindPulse is a smart mental wellness platform designed especially for students and youth. We help you understand your emotions, reduce stress, and build healthy habits using AI-powered support.
+            MindGuardian is a smart mental wellness platform designed especially for students and youth. We help you understand your emotions, reduce stress, and build healthy habits using AI-powered support.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ const About = () => {
 
         {/* Who It's For & Features */}
         <div className="mb-20">
-          <h2 className="text-center mb-10">Why MindPulse Exists</h2>
+          <h2 className="text-center mb-10">Why MindGuardian Exists</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-card p-6">
               <h3 className="text-lg font-bold mb-3">For Students</h3>
@@ -110,7 +110,7 @@ const About = () => {
 
         {/* Team Section */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold mb-4">Meet the Minds Behind MindPulse</h2>
+          <h2 className="text-4xl font-bold mb-4">Meet the Minds Behind MindGuardian</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto mb-12">
             Our project is developed by a passionate and innovative team dedicated to building impactful technology solutions that enhance user experience and well‑being.
           </p>

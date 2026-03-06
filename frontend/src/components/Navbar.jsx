@@ -46,7 +46,7 @@ const Navbar = ({ userName = 'User' }) => {
         try {
           new Notification(sample.title, {
             body: sample.body,
-            tag: 'mindpulse-inspiration',
+            tag: 'mindguardian-inspiration',
           });
           const item = { id: Date.now(), title: sample.title, body: sample.body, ts: Date.now(), read: false };
           setNotifications((s) => [item, ...s]);
@@ -277,8 +277,8 @@ const Navbar = ({ userName = 'User' }) => {
           <Link to="/dashboard" className="logo-container">
             {!imgError ? (
               <motion.img
-                src="/Images/mindpulse-logo.svg"
-                alt="MindPulse"
+                src="/MindGuardian_Logo.png"
+                alt="MindGuardian"
                 className="logo-img"
                 whileHover={{ rotate: 8, scale: 1.06 }}
                 transition={{ type: 'spring', stiffness: 360 }}
@@ -291,7 +291,7 @@ const Navbar = ({ userName = 'User' }) => {
                 transition={{ type: 'spring', stiffness: 360 }} 
                 aria-hidden
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MindPulse logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MindGuardian logo">
                   <defs>
                     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
                       <stop offset="0%" stopColor="#6c5ce7" />
@@ -303,7 +303,7 @@ const Navbar = ({ userName = 'User' }) => {
                 </svg>
               </motion.div>
             )}
-            <div className="logo">MindPulse</div>
+            <div className="logo">MindGuardian</div>
           </Link>
         </div>
 

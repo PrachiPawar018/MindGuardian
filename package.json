@@ -1,7 +1,7 @@
 {
-  "name": "mindpulse",
+  "name": "mindguardian",
   "version": "1.0.0",
-  "description": "MindPulse is a privacy-focused web application for student mental health monitoring, featuring daily journaling, mood tracking, and AI-powered sentiment analysis.",
+  "description": "MindGuardian is a privacy-focused web application for student mental health monitoring, featuring daily journaling, mood tracking, and AI-powered sentiment analysis.",
   "main": "index.js",
   "scripts": {
     "backend": "cd backend && npm run dev",

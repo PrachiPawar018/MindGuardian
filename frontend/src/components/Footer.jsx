@@ -90,9 +90,9 @@ const Footer = () => {
         <div className="footer-grid container">
           <motion.div className="col footer-brand" initial={{ opacity: 0, y: 6 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="brand-top">
-              <Link to="/home" className="brand-link" aria-label="MindPulse home">
-                <img src="/Images/mindpulse-logo.svg" alt="MindPulse" className="footer-logo" />
-                <div className="footer-title">MindPulse</div>
+              <Link to="/home" className="brand-link" aria-label="MindGuardian home">
+                <img src="/MindGuardian_Logo.png" alt="MindGuardian" className="footer-logo" />
+                <div className="footer-title">MindGuardian</div>
               </Link>
             </div>
 
@@ -162,7 +162,7 @@ const Footer = () => {
         <div className="footer-divider" aria-hidden />
 
         <div className="footer-bottom container">
-          <small>© {new Date().getFullYear()} MindPulse • Built with ❤️ to support student mental wellness.</small>
+          <small>© {new Date().getFullYear()} MindGuardian • Built with ❤️ to support student mental wellness.</small>
           <div className="footer-links-inline">
             <Link to="/privacy">Privacy</Link>
             <span className="sep">•</span>

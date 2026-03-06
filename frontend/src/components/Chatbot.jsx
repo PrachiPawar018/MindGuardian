@@ -8,7 +8,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi there! I'm MindPulse, your wellness companion. 💜 How are you feeling today?",
+      text: "Hi there! I'm MindGuardian, your wellness companion. 💜 How are you feeling today?",
       sender: 'bot',
       type: 'text'
     }
@@ -161,7 +161,7 @@ const Chatbot = () => {
                   {emotionMap[currentEmotion] || '🤖'}
                 </div>
                 <div className="bot-status">
-                  MindPulse AI
+                  MindGuardian AI
                   <span>Online & Listening 🌿</span>
                 </div>
               </div>
