@@ -25,7 +25,7 @@ const Section = ({ title, icon: Icon, children, delay }) => (
 
 const PrivacyPolicy = () => {
   return (
-    <PageWrapper title="Privacy Policy" description="How MindPulse collects, uses, and protects your personal data.">
+    <PageWrapper title="Privacy Policy" description="How MindGuardian collects, uses, and protects your personal data.">
       <div className="container py-12 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <motion.h1 
@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
           className="glass-card bg-gradient-to-br from-green-500/5 to-emerald-500/5 border-green-500/20 p-8 mb-12"
         >
           <h3 className="flex items-center gap-2 text-green-600 dark:text-green-400 font-bold text-xl mb-4">
-            <CheckCircle size={24} /> The MindPulse Promise
+            <CheckCircle size={24} /> The MindGuardian Promise
           </h3>
           <p className="text-lg font-medium mb-0">
             We never sell your data. Ever. Your emotional wellbeing is personal, and your data belongs to you. We use industry-standard encryption to keep it safe.
@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
 
         <div className="mt-12 text-center text-muted text-sm">
           <p>
-            MindPulse is a support tool, not a medical replacement. <br/>
+            MindGuardian is a support tool, not a medical replacement. <br/>
             If you are in crisis, please contact professional services immediately.
           </p>
         </div>

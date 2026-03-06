@@ -2,7 +2,7 @@ import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
 /**
- * Generates and downloads a PDF report for MindPulse journal entries.
+ * Generates and downloads a PDF report for MindGuardian journal entries.
  * @param {Array} entries - The journal entries to export.
  * @param {string} username - Current user's username.
  * @param {string} email - Current user's email.
@@ -16,8 +16,8 @@ export const generateJournalPDF = (entries, username, email) => {
   
   // Branding & Header
   doc.setFontSize(22);
-  doc.setTextColor(108, 92, 231); // MindPulse Primary Color
-  doc.text('MindPulse Mental Health Report', 14, 22);
+  doc.setTextColor(108, 92, 231); // MindGuardian Primary Color
+  doc.text('MindGuardian Mental Health Report', 14, 22);
   
   doc.setFontSize(12);
   doc.setTextColor(100);
@@ -75,7 +75,7 @@ export const generateJournalPDF = (entries, username, email) => {
     );
   }
   
-  doc.save(`MindPulse_Report_${username || 'User'}_${Date.now()}.pdf`);
+  doc.save(`MindGuardian_Report_${username || 'User'}_${Date.now()}.pdf`);
 };
 
 /**
@@ -91,7 +91,7 @@ export const getJournalPDFBase64 = (entries, username, email) => {
   // Branding & Header
   doc.setFontSize(22);
   doc.setTextColor(108, 92, 231);
-  doc.text('MindPulse Mental Health Report', 14, 22);
+  doc.text('MindGuardian Mental Health Report', 14, 22);
   
   doc.setFontSize(12);
   doc.setTextColor(100);

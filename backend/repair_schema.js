@@ -19,7 +19,7 @@ async function checkAndAddColumn(tableName, columnName, definition) {
 }
 
 async function runRepair() {
-  console.log('--- MindPulse Schema Repair ---');
+  console.log('--- MindGuardian Schema Repair ---');
   try {
     await sequelize.authenticate();
     console.log('✅ Database connected.');

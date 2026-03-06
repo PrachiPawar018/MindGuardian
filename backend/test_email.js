@@ -28,8 +28,8 @@ const testEmail = async () => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // Send to self
-      subject: 'MindPulse Email Test',
-      text: 'This is a test email from the MindPulse diagnostic script.',
+      subject: 'MindGuardian Email Test',
+      text: 'This is a test email from the MindGuardian diagnostic script.',
     };
 
     console.log('Sending test email to self...');

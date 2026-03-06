@@ -77,9 +77,9 @@ const getTransporter = async () => {
 const sendOTPEmail = async (email, otp) => {
   try {
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'noreply@mindpulse.com',
+      from: process.env.EMAIL_USER || 'noreply@mindguardian.com',
       to: email,
-      subject: '🔐 MindPulse Password Reset - Your OTP Code',
+      subject: '🔐 MindGuardian Password Reset - Your OTP Code',
       html: `
         <!DOCTYPE html>
         <html>
@@ -190,7 +190,7 @@ const sendOTPEmail = async (email, otp) => {
           <body>
             <div class="container">
               <div class="header">
-                <div class="logo">🧠 MindPulse</div>
+                <div class="logo">🧠 MindGuardian</div>
                 <h1>Reset Your Password</h1>
                 <p class="subtitle">Your account security is important to us</p>
               </div>
@@ -205,7 +205,7 @@ const sendOTPEmail = async (email, otp) => {
               </div>
 
               <div class="info-box">
-                <p class="info-text">⏰ Never share this code with anyone. MindPulse support will never ask for it.</p>
+                <p class="info-text">⏰ Never share this code with anyone. MindGuardian support will never ask for it.</p>
               </div>
 
               <div class="features">
@@ -220,7 +220,7 @@ const sendOTPEmail = async (email, otp) => {
 
               <div class="footer">
                 <p class="footer-text">
-                  © 2026 MindPulse. All rights reserved.<br>
+                  © 2026 MindGuardian. All rights reserved.<br>
                   This is an automated message, please do not reply.
                 </p>
                 <p class="footer-text">
@@ -231,7 +231,7 @@ const sendOTPEmail = async (email, otp) => {
           </body>
         </html>
       `,
-      text: `Your MindPulse password reset code is: ${otp}\n\nValid for 10 minutes.\n\nNever share this code with anyone.`,
+      text: `Your MindGuardian password reset code is: ${otp}\n\nValid for 10 minutes.\n\nNever share this code with anyone.`,
     };
 
     const { transporter, isTest } = await getTransporter();
@@ -255,9 +255,9 @@ const sendOTPEmail = async (email, otp) => {
 const sendPasswordResetConfirmation = async (email, username) => {
   try {
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'noreply@mindpulse.com',
+      from: process.env.EMAIL_USER || 'noreply@mindguardian.com',
       to: email,
-      subject: '✅ MindPulse Password Successfully Reset',
+      subject: '✅ MindGuardian Password Successfully Reset',
       html: `
         <!DOCTYPE html>
         <html>
@@ -330,7 +330,7 @@ const sendPasswordResetConfirmation = async (email, username) => {
           <body>
             <div class="container">
               <div class="header">
-                <div class="logo">🧠 MindPulse</div>
+                <div class="logo">🧠 MindGuardian</div>
                 <h1>Password Reset Successful</h1>
               </div>
 
@@ -341,7 +341,7 @@ const sendPasswordResetConfirmation = async (email, username) => {
 
               <div class="content">
                 <p>Hi ${username},</p>
-                <p>Your MindPulse account password has been successfully changed. You can now log in with your new password.</p>
+                <p>Your MindGuardian account password has been successfully changed. You can now log in with your new password.</p>
                 
                 <p><strong>Account Details:</strong></p>
                 <ul>
@@ -354,7 +354,7 @@ const sendPasswordResetConfirmation = async (email, username) => {
 
               <div class="footer">
                 <p class="footer-text">
-                  © 2026 MindPulse. All rights reserved.<br>
+                  © 2026 MindGuardian. All rights reserved.<br>
                   Your mental health and security matter to us.
                 </p>
               </div>
@@ -385,22 +385,22 @@ const sendPasswordResetConfirmation = async (email, username) => {
 const sendWelcomeEmail = async (email, username) => {
   try {
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'noreply@mindpulse.com',
+      from: process.env.EMAIL_USER || 'noreply@mindguardian.com',
       to: email,
-      subject: `Welcome to MindPulse, ${username}! 🧠`,
+      subject: `Welcome to MindGuardian, ${username}! 🧠`,
       html: `
         <div style="font-family: Arial, Helvetica, sans-serif; background:#0f172a; color:#e2e8f0; padding:24px;">
           <div style="max-width:600px;margin:0 auto;background:rgba(17,24,39,0.9);padding:28px;border-radius:10px;border:1px solid rgba(99,102,241,0.08);">
-            <h2 style="color:#a78bfa;margin:0 0 10px;">Welcome to MindPulse, ${username}!</h2>
-            <p style="color:#94a3b8;margin:0 0 16px;">Thanks for creating an account. We're glad you're here — MindPulse helps you track moods and journal your way to better wellbeing.</p>
+            <h2 style="color:#a78bfa;margin:0 0 10px;">Welcome to MindGuardian, ${username}!</h2>
+            <p style="color:#94a3b8;margin:0 0 16px;">Thanks for creating an account. We're glad you're here — MindGuardian helps you track moods and journal your way to better wellbeing.</p>
             <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/login" style="display:inline-block;padding:10px 18px;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">Get Started</a>
-            <p style="color:#64748b;margin-top:18px;font-size:13px;">If you didn't sign up for MindPulse, you can ignore this message.</p>
+            <p style="color:#64748b;margin-top:18px;font-size:13px;">If you didn't sign up for MindGuardian, you can ignore this message.</p>
             <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:18px 0;" />
-            <p style="color:#64748b;font-size:12px;margin:0;">© 2026 MindPulse. All rights reserved.</p>
+            <p style="color:#64748b;font-size:12px;margin:0;">© 2026 MindGuardian. All rights reserved.</p>
           </div>
         </div>
       `,
-      text: `Welcome to MindPulse, ${username}! Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/login to get started.`,
+      text: `Welcome to MindGuardian, ${username}! Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/login to get started.`,
     };
 
     const { transporter, isTest } = await getTransporter();
@@ -424,20 +424,20 @@ const sendWelcomeEmail = async (email, username) => {
 const sendSubscriptionConfirmationEmail = async (email) => {
   try {
     const mailOptions = {
-      from: `"MindPulse" <${process.env.EMAIL_USER || 'noreply@mindpulse.com'}>`,
+      from: `"MindGuardian" <${process.env.EMAIL_USER || 'noreply@mindguardian.com'}>`,
       to: email,
-      subject: '✅ You are subscribed to MindPulse reminders',
+      subject: '✅ You are subscribed to MindGuardian reminders',
       html: `
         <div style="font-family: Arial, Helvetica, sans-serif; background:#0f172a; color:#e2e8f0; padding:24px;"> 
           <div style="max-width:600px;margin:0 auto;background:rgba(17,24,39,0.9);padding:28px;border-radius:10px;border:1px solid rgba(99,102,241,0.08);"> 
             <h2 style="color:#a78bfa;margin:0 0 10px;">You're in! 🎉</h2>
-            <p style="color:#94a3b8;margin:0 0 16px;">Thanks for subscribing to MindPulse daily wellbeing reminders.</p>
+            <p style="color:#94a3b8;margin:0 0 16px;">Thanks for subscribing to MindGuardian daily wellbeing reminders.</p>
             <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/journal" style="display:inline-block;padding:10px 18px;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">Open Journal</a>
             <p style="color:#64748b;margin-top:18px;font-size:13px;">If this wasn't you, you can unsubscribe anytime from the footer link in our emails.</p>
           </div>
         </div>
       `,
-      text: `You're subscribed to MindPulse reminders. Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/journal.`,
+      text: `You're subscribed to MindGuardian reminders. Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/journal.`,
     };
 
     const { transporter, isTest } = await getTransporter();
@@ -462,13 +462,13 @@ const sendSubscriptionConfirmationEmail = async (email) => {
 const sendDailyEmail = async (email) => {
   try {
     const mailOptions = {
-      from: `"MindPulse" <${process.env.EMAIL_USER || 'noreply@mindpulse.com'}>`,
+      from: `"MindGuardian" <${process.env.EMAIL_USER || 'noreply@mindguardian.com'}>`,
       to: email,
-      subject: '🌟 Daily MindPulse - Your Path to Wellbeing',
+      subject: '🌟 Daily MindGuardian - Your Path to Wellbeing',
       html: `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: auto; padding: 25px; background-color: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #6366f1; margin: 0; font-size: 28px;">MindPulse</h1>
+            <h1 style="color: #6366f1; margin: 0; font-size: 28px;">MindGuardian</h1>
             <p style="color: #64748b; margin-top: 5px;">Mindful journaling & insights</p>
           </div>
           
@@ -490,13 +490,13 @@ const sendDailyEmail = async (email) => {
           </div>
 
           <div style="margin-top: 40px; text-align: center; color: #94a3b8; font-size: 13px;">
-            <p>You're receiving this because you subscribed to daily reminders from MindPulse.</p>
-            <p>© 2026 MindPulse. Built with ❤️ for your wellness.</p>
+            <p>You're receiving this because you subscribed to daily reminders from MindGuardian.</p>
+            <p>© 2026 MindGuardian. Built with ❤️ for your wellness.</p>
             <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/unsubscribe" style="color: #6366f1; text-decoration: none;">Unsubscribe</a>
           </div>
         </div>
       `,
-      text: `Daily MindPulse Reminder: Stay consistent with your journaling. Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/journal to record your thoughts today.`,
+      text: `Daily MindGuardian Reminder: Stay consistent with your journaling. Visit ${process.env.FRONTEND_URL || 'http://localhost:5173'}/journal to record your thoughts today.`,
     };
 
     const { transporter, isTest } = await getTransporter();
@@ -547,14 +547,14 @@ const sendEmergencyVerificationEmail = async (email, contactName, userName, toke
   
   try {
     const mailOptions = {
-      from: `"MindPulse Wellness" <${process.env.EMAIL_USER || 'noreply@mindpulse.com'}>`,
+      from: `"MindGuardian Wellness" <${process.env.EMAIL_USER || 'noreply@mindguardian.com'}>`,
       to: email,
-      subject: '🚨 Action Required: Verify Emergency Contact for MindPulse',
+      subject: '🚨 Action Required: Verify Emergency Contact for MindGuardian',
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
           <h2 style="color: #6366f1;">Verify Your Email</h2>
           <p>Hello ${contactName},</p>
-          <p><strong>${userName}</strong> has added you as their emergency contact on <strong>MindPulse</strong>, a student mental wellness platform.</p>
+          <p><strong>${userName}</strong> has added you as their emergency contact on <strong>MindGuardian</strong>, a student mental wellness platform.</p>
           <p>To ensure we can reach you in case of a serious wellness concern, please verify your email address by clicking the button below:</p>
           <div style="text-align: center; margin: 30px 0;">
             <a href="${verifyUrl}" style="background-color: #6366f1; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Verify Email Address</a>
@@ -565,7 +565,7 @@ const sendEmergencyVerificationEmail = async (email, contactName, userName, toke
           <p style="font-size: 12px; color: #999;">If you did not expect this email, please ignore it. This is a wellness safety feature.</p>
         </div>
       `,
-      text: `Hello ${contactName}, ${userName} has added you as their emergency contact on MindPulse. Please verify your email here: ${verifyUrl}`,
+      text: `Hello ${contactName}, ${userName} has added you as their emergency contact on MindGuardian. Please verify your email here: ${verifyUrl}`,
     };
 
     const { transporter, isTest } = await getTransporter();
@@ -591,14 +591,14 @@ module.exports = {
   sendEmergencyAlertEmail: async (email, contactName, userName, reason, attachments = []) => {
     try {
       const mailOptions = {
-        from: `"MindPulse Wellness System" <${process.env.EMAIL_USER || 'noreply@mindpulse.com'}>`,
+        from: `"MindGuardian Wellness System" <${process.env.EMAIL_USER || 'noreply@mindguardian.com'}>`,
         to: email,
         subject: '🚨 Urgent Wellness Support Notification – Immediate Attention Recommended',
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #fee2e2; border-radius: 10px; background-color: #fef2f2;">
             <h2 style="color: #ef4444;">Urgent Wellness Notification</h2>
             <p>Hello ${contactName},</p>
-            <p>This is an automated wellness notification regarding <strong>${userName}</strong> from the MindPulse platform.</p>
+            <p>This is an automated wellness notification regarding <strong>${userName}</strong> from the MindGuardian platform.</p>
             <p>Our system has identified indicators suggesting that <strong>${userName}</strong> may currently be experiencing significant emotional distress and may require immediate emotional support.</p>
             <p><strong>Reason for notification:</strong> ${reason}</p>
             <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 20px 0;">

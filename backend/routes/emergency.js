@@ -112,7 +112,7 @@ router.post('/emergency-alert', protect, async (req, res) => {
         reason,
         [
             {
-                filename: `MindPulse_Wellness_Report_${user.username}_${new Date().toISOString().split('T')[0]}.pdf`,
+                filename: `MindGuardian_Wellness_Report_${user.username}_${new Date().toISOString().split('T')[0]}.pdf`,
                 content: pdfData ? pdfData.split('base64,')[1] : '',
                 encoding: 'base64'
             }
@@ -161,7 +161,7 @@ router.get('/verify-emergency-email', async (req, res) => {
     res.send(`
       <div style="font-family: sans-serif; text-align: center; padding: 50px;">
         <h1 style="color: #6366f1;">Email Verified successfully! ✅</h1>
-        <p>Thank you for verifying your email address as an emergency contact for MindPulse.</p>
+        <p>Thank you for verifying your email address as an emergency contact for MindGuardian.</p>
         <p>You may now close this window.</p>
       </div>
     `);

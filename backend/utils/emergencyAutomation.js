@@ -79,7 +79,7 @@ const analyzeWellnessTrend = async (userId) => {
         reason,
         [
           {
-            filename: `MindPulse_Wellness_Report_${user.username}.pdf`,
+            filename: `MindGuardian_Wellness_Report_${user.username}.pdf`,
             content: pdfBuffer
           }
         ]

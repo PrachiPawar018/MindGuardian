@@ -29,7 +29,7 @@ const Terms = () => {
   return (
     <PageWrapper title="Terms & Conditions" description="User agreements and policies for maintaining a safe and supportive community.">
       <Helmet>
-        <title>Terms & Conditions | MindPulse</title>
+        <title>Terms & Conditions | MindGuardian</title>
       </Helmet>
       
       <div className="container py-12 max-w-4xl mx-auto">
@@ -46,13 +46,13 @@ const Terms = () => {
 
         <div className="glass-card p-8 md:p-12 mb-12">
           <Section title="Introduction" icon={FileText} delay={0.2} ariaLabel="Introduction">
-            <p>Welcome to MindPulse. By accessing or using our website and services, you agree to be bound by these Terms and Conditions. Our platform is designed to support student mental wellness through journaling, insights, and AI support.</p>
+            <p>Welcome to MindGuardian. By accessing or using our website and services, you agree to be bound by these Terms and Conditions. Our platform is designed to support student mental wellness through journaling, insights, and AI support.</p>
           </Section>
 
           <hr className="border-gray-200 dark:border-gray-700 my-8 opacity-50" />
 
           <Section title="User Responsibilities" icon={Users} delay={0.3} ariaLabel="User Responsibilities">
-            <p>As a user of MindPulse, you agree to:</p>
+            <p>As a user of MindGuardian, you agree to:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Provide accurate information during registration.</li>
               <li>Maintain the confidentiality of your account credentials.</li>
@@ -65,20 +65,20 @@ const Terms = () => {
           <hr className="border-gray-200 dark:border-gray-700 my-8 opacity-50" />
 
           <Section title="Intellectual Property" icon={BadgeCheck} delay={0.4} ariaLabel="Intellectual Property">
-            <p>The MindPulse platform, including its design, code, and content (excluding user-generated journal entries), is owned by MindPulse and is protected by copyright and intellectual property laws.</p>
+            <p>The MindGuardian platform, including its design, code, and content (excluding user-generated journal entries), is owned by MindGuardian and is protected by copyright and intellectual property laws.</p>
           </Section>
 
           <hr className="border-gray-200 dark:border-gray-700 my-8 opacity-50" />
 
           <Section title="Limitation of Liability" icon={AlertCircle} delay={0.5} ariaLabel="Limitation of Liability">
-            <p>MindPulse is a wellness tool and not a replacement for professional medical advice, diagnosis, or treatment. We are not liable for any actions taken based on the information provided by our AI or platform. In case of emergency, please contact professional services immediately.</p>
+            <p>MindGuardian is a wellness tool and not a replacement for professional medical advice, diagnosis, or treatment. We are not liable for any actions taken based on the information provided by our AI or platform. In case of emergency, please contact professional services immediately.</p>
           </Section>
 
           <hr className="border-gray-200 dark:border-gray-700 my-8 opacity-50" />
 
           <Section title="Contact Information" icon={Scale} delay={0.6} ariaLabel="Contact Information">
             <p>If you have any questions about these Terms, please contact us at:</p>
-            <p className="font-medium mt-2">mindpulse1801@gmail.com</p>
+            <p className="font-medium mt-2">mindguardian1801@gmail.com</p>
           </Section>
         </div>
 

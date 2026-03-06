@@ -19,7 +19,7 @@ const generateWellnessReport = (entries, user) => {
             // Header - Branding
             doc.fillColor('#6c5ce7')
                .fontSize(22)
-               .text('MindPulse Mental Health Report', { align: 'left' });
+               .text('MindGuardian Mental Health Report', { align: 'left' });
             
             doc.moveDown(0.5);
             doc.fillColor('#444444')
@@ -79,7 +79,7 @@ const generateWellnessReport = (entries, user) => {
             for (let i = 0; i < pageCount; i++) {
                 doc.switchToPage(i);
                 doc.fontSize(8).fillColor('#999999').text(
-                    `MindPulse Wellness Safety Net - Page ${i + 1} of ${pageCount}`,
+                    `MindGuardian Wellness Safety Net - Page ${i + 1} of ${pageCount}`,
                     50,
                     doc.page.height - 40,
                     { align: 'center' }

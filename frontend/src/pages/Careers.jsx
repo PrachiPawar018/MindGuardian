@@ -25,7 +25,7 @@ const JobCard = ({ title, type, icon: Icon, delay }) => (
     
     <div className="mt-auto pt-4">
       <a 
-        href={`mailto:careers@mindpulse.com?subject=Application for ${title}`}
+        href={`mailto:careers@mindguardian.com?subject=Application for ${title}`}
         className="btn btn-secondary w-full group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center gap-2"
       >
         Apply Now <ArrowRight size={16} />
@@ -36,7 +36,7 @@ const JobCard = ({ title, type, icon: Icon, delay }) => (
 
 const Careers = () => {
   return (
-    <PageWrapper title="Careers" description="Join the MindPulse team and help build the future of student mental wellness.">
+    <PageWrapper title="Careers" description="Join the MindGuardian team and help build the future of student mental wellness.">
       <div className="container py-12">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -48,7 +48,7 @@ const Careers = () => {
             Work on What Matters
           </motion.h1>
           <p className="text-xl text-muted">
-            At MindPulse, we believe technology should heal, not harm. We are building tools that improve emotional wellbeing for young people across the world.
+            At MindGuardian, we believe technology should heal, not harm. We are building tools that improve emotional wellbeing for young people across the world.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ const Careers = () => {
           <p className="text-muted mb-8">
             We are always looking for passionate individuals. If you want to contribute to our mission, we'd love to hear from you.
           </p>
-          <a href="mailto:careers@mindpulse.com" className="btn btn-primary inline-flex items-center gap-2">
+          <a href="mailto:careers@mindguardian.com" className="btn btn-primary inline-flex items-center gap-2">
             <Mail size={18} /> Send Open Application
           </a>
         </div>

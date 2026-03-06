@@ -193,7 +193,7 @@ const Navbar = ({ userName = 'User' }) => {
     try {
       const notif = new Notification(sample.title, {
         body: sample.body,
-        tag: 'mindpulse-inspiration',
+        tag: 'mindguardian-inspiration',
       });
       // add to local list
       const item = { id: Date.now(), title: sample.title, body: sample.body, ts: Date.now(), read: false };
