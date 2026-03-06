@@ -224,7 +224,7 @@ const sendOTPEmail = async (email, otp) => {
                   This is an automated message, please do not reply.
                 </p>
                 <p class="footer-text">
-                  <strong>Need help?</strong> Contact us at support@mindpulse.com
+                  <strong>Need help?</strong> Contact us at support@mindguardian.com
                 </p>
               </div>
             </div>

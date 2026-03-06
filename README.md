@@ -1,6 +1,6 @@
-# MindPulse - AI-Powered Student Mental Health Platform
+# MindGuardian - AI-Powered Student Mental Health Platform
 
-MindPulse is a privacy-focused web application for student mental health
+MindGuardian is a privacy-focused web application for student mental health
 monitoring, featuring daily journaling, mood tracking, and AI-powered sentiment
 analysis.
 

@@ -157,11 +157,11 @@ forgotSuccess: string
 ## Email Templates
 
 ### OTP Email
-**Subject:** "Reset Your MindPulse Password"
+**Subject:** "Reset Your MindGuardian Password"
 - 🔐 Large OTP display (6 digits)
 - ⏱️ 10-minute expiry warning
 - 🔒 Security note about handling OTP privately
-- Sender: MindPulse Team
+- Sender: MindGuardian Team
 
 ### Password Reset Confirmation
 **Subject:** "Your Password Has Been Reset"
@@ -274,7 +274,7 @@ EMAIL_PASS=your-app-password
 - [ ] OTP email received within 30 seconds
 - [ ] OTP email displays correctly in inbox
 - [ ] Confirmation email received after password reset
-- [ ] Both emails have proper branding (MindPulse header)
+- [ ] Both emails have proper branding (MindGuardian header)
 - [ ] OTP email has expiry warning
 - [ ] Confirmation email has security recommendations
 

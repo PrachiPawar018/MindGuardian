@@ -402,7 +402,7 @@ def chat():
             name = name_match.group(1).capitalize()
             if 'your name' in user_lower or 'what is your name' in user_lower:
                 return jsonify({
-                    'text': f"Nice to meet you, {name}! I'm MindPulse — your wellness companion. 💜",
+                    'text': f"Nice to meet you, {name}! I'm MindGuardian — your wellness companion. 💜",
                     'emotion': 'neutral',
                     'risk': False,
                     'suggestions': ['Daily Check-in', 'Journaling']

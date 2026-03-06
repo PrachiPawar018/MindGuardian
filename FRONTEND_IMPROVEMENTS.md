@@ -1,7 +1,7 @@
-# 🎨 MindPulse Frontend - UI/UX Improvements for Hackathon Success
+# 🎨 MindGuardian Frontend - UI/UX Improvements for Hackathon Success
 
 ## ✨ Overview
-Your MindPulse mental health application frontend has been completely transformed with a modern, beautiful, and hackathon-winning design. Every component now features stunning visuals, smooth animations, and exceptional user experience.
+Your MindGuardian mental health application frontend has been completely transformed with a modern, beautiful, and hackathon-winning design. Every component now features stunning visuals, smooth animations, and exceptional user experience.
 
 ---
 
@@ -335,6 +335,6 @@ Show judges:
 
 ## 🎉 Summary
 
-Your MindPulse frontend is now a **modern, beautiful, and professional application** that stands out in any hackathon competition. The attention to detail, smooth interactions, and visual design demonstrate serious UX/UI expertise.
+Your MindGuardian frontend is now a **modern, beautiful, and professional application** that stands out in any hackathon competition. The attention to detail, smooth interactions, and visual design demonstrate serious UX/UI expertise.
 
 **Good luck at the hackathon!** 🚀

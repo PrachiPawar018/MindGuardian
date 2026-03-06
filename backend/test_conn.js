@@ -8,7 +8,7 @@ async function tryConnect(password) {
             host: process.env.DB_HOST || 'localhost',
             user: process.env.DB_USER || 'root',
             password: password,
-            database: process.env.DB_NAME || 'mindpulse',
+            database: process.env.DB_NAME || 'mindguardian',
             port: parseInt(process.env.DB_PORT) || 3306,
             connectTimeout: 5000
         });

@@ -124,7 +124,7 @@ const Register = () => {
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </motion.div>
-          <h2 style={{ margin: '0 0 0.25rem 0', color: 'var(--text-dark)' }}>Join MindPulse</h2>
+          <h2 style={{ margin: '0 0 0.25rem 0', color: 'var(--text-dark)' }}>Join MindGuardian</h2>
           <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.95rem' }}>
             Create an account and start tracking your mood with beautiful insights.
           </p>

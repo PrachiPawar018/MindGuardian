@@ -7,7 +7,7 @@ const test = async () => {
       host: process.env.DB_HOST || 'localhost',
       user: process.env.DB_USER || 'root',
       password: process.env.DB_PASSWORD || '',
-      database: process.env.DB_NAME || 'mindpulse',
+      database: process.env.DB_NAME || 'mindguardian',
       port: process.env.DB_PORT || 3306
     });
     console.log('✅ Connection Successful');

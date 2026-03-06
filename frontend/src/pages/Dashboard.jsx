@@ -360,7 +360,7 @@ const Dashboard = () => {
     if (!('Notification' in window)) return alert('Notifications not supported');
     Notification.requestPermission().then(p => {
       if (p !== 'granted') return alert('Please allow notifications');
-      setTimeout(() => new Notification('MindPulse Reminder', { body: text }), mins*60*1000);
+      setTimeout(() => new Notification('MindGuardian Reminder', { body: text }), mins*60*1000);
       alert(`Reminder scheduled in ${mins} minute(s)`);
     });
   };

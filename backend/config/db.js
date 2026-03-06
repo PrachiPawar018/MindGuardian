@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'mindpulse',
+  process.env.DB_NAME || 'mindguardian',
   process.env.DB_USER || 'root',
   process.env.DB_PASSWORD || '',
   {

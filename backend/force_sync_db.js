@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 const sync = async () => {
-    const dbName = process.env.DB_NAME || 'mindpulse';
+    const dbName = process.env.DB_NAME || 'mindguardian';
     console.log(`--- Emergency Schema Sync ---`);
     console.log(`Connected DB: ${dbName}`);
 

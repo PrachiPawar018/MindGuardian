@@ -1,5 +1,5 @@
 @echo off
-echo Starting MindPulse Components...
+echo Starting MindGuardian Components...
 
 start cmd /k "cd backend && npm run dev"
 start cmd /k "cd ai_service && python app.py"

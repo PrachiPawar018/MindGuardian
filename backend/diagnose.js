@@ -3,12 +3,12 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const diagnose = async () => {
-  console.log('--- MindPulse Diagnostics ---');
+  console.log('--- MindGuardian Diagnostics ---');
 
   // 1. Check DB
   console.log('\n1. Checking Database Connection...');
   const sequelize = new Sequelize(
-    process.env.DB_NAME || 'mindpulse',
+    process.env.DB_NAME || 'mindguardian',
     process.env.DB_USER || 'root',
     process.env.DB_PASSWORD || '',
     {

@@ -296,7 +296,7 @@ router.post('/alert-emergency-contact', protect, async (req, res) => {
                 reason,
                 [
                     {
-                        filename: `MindPulse_Wellness_Report_${req.user.username}.pdf`,
+                        filename: `MindGuardian_Wellness_Report_${req.user.username}.pdf`,
                         content: pdfBuffer
                     }
                 ]
@@ -309,7 +309,7 @@ router.post('/alert-emergency-contact', protect, async (req, res) => {
                     negativeCount,
                     totalEntries: recentEntries.length,
                     negativePercentage: negativePercentage.toFixed(2),
-                    whatsappMessage: `Hi ${contact.name}, I wanted to check in with you. I've been feeling stressed and could really use someone to talk to. Could we catch up soon? - From ${req.user.username}`,
+                    gmailMessage: `Hi ${contact.name}, I wanted to check in with you. I've been feeling stressed and could really use someone to talk to. Could we catch up soon? - From ${req.user.username}`,
                     contactPhone: contact.phone,
                     contactName: contact.name
                 }

@@ -252,7 +252,7 @@ Response (400 Bad Request):
 
 ## Testing with Postman
 
-### 1. Create a New Collection: "MindPulse Auth"
+### 1. Create a New Collection: "MindGuardian Auth"
 
 ### 2. Request 1: Get OTP
 - **Method:** POST
@@ -433,7 +433,7 @@ Create a Postman environment for easier testing:
 
 ```json
 {
-  "name": "MindPulse Dev",
+  "name": "MindGuardian Dev",
   "values": [
     {
       "key": "baseUrl",

@@ -579,7 +579,7 @@ const Support = ({ risk = 'low', recommendations = [] }) => {
 
       if (data.success) {
         const contact = sentimentAlert.contacts.find(c => c.id === contactId);
-        alert(`✓ Alert ready to send to ${contact.name}!\n\nMessage: "${data.sentimentAnalysis.whatsappMessage}"\n\nNote: In production, this would be sent via WhatsApp.`);
+        alert(`✓ Alert ready to send to ${contact.name}!\n\nMessage: "${data.sentimentAnalysis.gmailMessage}"\n\nNote: In production, this would be sent via Gmail.`);
         setSentimentAlert(null);
       } else {
         alert(`Alert not sent: ${data.message}`);
@@ -777,7 +777,7 @@ const Support = ({ risk = 'low', recommendations = [] }) => {
               <HeartHandshake size={18} />
               <div>
                 <div className="contact-label">Peer Support</div>
-                <div className="contact-value">mindpulse1801@gmail.com</div>
+                <div className="contact-value">mindguardian1801@gmail.com</div>
               </div>
             </div>
           </motion.div>

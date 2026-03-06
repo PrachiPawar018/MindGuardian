@@ -1,7 +1,7 @@
 # 🔐 Password Reset Feature - Implementation Complete ✅
 
 ## Summary
-Complete password recovery system with OTP verification has been successfully implemented and integrated into the MindPulse application.
+Complete password recovery system with OTP verification has been successfully implemented and integrated into the MindGuardian application.
 
 ---
 
@@ -84,7 +84,7 @@ Backend: ✅ READY
 
 ### File Structure
 ```
-MindPulse/
+MindGuardian/
 ├── frontend/
 │   └── src/pages/
 │       └── Login.jsx ..................... Updated with password reset modal
