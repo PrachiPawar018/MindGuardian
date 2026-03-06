@@ -1,0 +1,308 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
+import { UserPlus, AlertCircle, CheckCircle, Eye, EyeOff } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const Register = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setSuccessMessage('');
+    setLoading(true);
+
+    try {
+      const { data } = await axios.post('/api/auth/register', { username, email, password });
+      setSuccessMessage('Account created successfully! Redirecting...');
+      setTimeout(() => {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('username', data.username);
+        localStorage.setItem('email', data.email);
+        navigate('/dashboard');
+      }, 1500);
+    } catch (err) {
+      const errorMessage = err.response?.data?.message || 'Registration failed';
+      setError(errorMessage);
+      setLoading(false);
+    }
+  };
+
+  // Determine error type for better styling
+  const isAlreadyRegistered = error.toLowerCase().includes('already registered');
+  const isEmailTaken = error.toLowerCase().includes('email');
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        width: '100vw',
+        margin: 0,
+        padding: 0,
+        background: 'linear-gradient(135deg, #6366f1 0%, #a21caf 100%)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Animated, colorful background shapes (same as Login page) */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '-120px',
+          left: '-120px',
+          width: '340px',
+          height: '340px',
+          background: 'radial-gradient(circle at 60% 40%, #818cf8 0%, #a5b4fc 60%, transparent 100%)',
+          filter: 'blur(30px)',
+          opacity: 0.7,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '-100px',
+          right: '-100px',
+          width: '300px',
+          height: '300px',
+          background: 'radial-gradient(circle at 40% 60%, #f472b6 0%, #f9a8d4 60%, transparent 100%)',
+          filter: 'blur(30px)',
+          opacity: 0.6,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '120vw',
+          height: '120vh',
+          background: 'radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 80%)',
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
+
+      <div className="glass-card animate-in" style={{
+        width: '100%',
+        maxWidth: '420px',
+        position: 'relative',
+        zIndex: 2,
+        background: 'rgba(255,255,255,0.95)',
+        boxShadow: '0 8px 32px 0 rgba(99,102,241,0.18), 0 1.5px 8px 0 rgba(236,72,153,0.10)',
+        borderRadius: '1.5rem',
+        border: '1.5px solid rgba(99,102,241,0.10)',
+        padding: '2.5rem 2rem',
+      }}>
+        {/* Header with Logo */}
+        <div style={{ textAlign: 'center', marginBottom: '1.6rem' }}>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+            style={{ marginBottom: '1rem', display: 'inline-flex' }}
+          >
+            <img
+              src="/mindpulse-logo.png"
+              alt="MindPulse Logo"
+              style={{ height: '60px', width: 'auto', borderRadius: '8px' }}
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </motion.div>
+          <h2 style={{ margin: '0 0 0.25rem 0', color: 'var(--text-dark)' }}>Join MindPulse</h2>
+          <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.95rem' }}>
+            Create an account and start tracking your mood with beautiful insights.
+          </p>
+        </div>
+
+        {/* Error Message - Professional styling */}
+        {error && (
+          <div style={{
+            background: isAlreadyRegistered
+              ? 'rgba(248, 113, 113, 0.15)'
+              : 'rgba(248, 113, 113, 0.15)',
+            border: `1.5px solid ${isAlreadyRegistered
+              ? 'rgba(248, 113, 113, 0.4)'
+              : 'rgba(248, 113, 113, 0.4)'}`,
+            color: '#fca5a5',
+            padding: '1rem',
+            borderRadius: '0.875rem',
+            marginBottom: '1.5rem',
+            fontSize: '0.95rem',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '0.75rem',
+            backdropFilter: 'blur(10px)'
+          }}>
+            <AlertCircle size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+            <div>
+              <p style={{ margin: '0 0 0.25rem 0', fontWeight: '600' }}>
+                {isAlreadyRegistered ? 'Account Exists' : 'Registration Error'}
+              </p>
+              <p style={{ margin: 0, fontSize: '0.9rem', opacity: 0.9 }}>
+                {error}
+              </p>
+              {isAlreadyRegistered && (
+                <p style={{ margin: '0.5rem 0 0 0', fontSize: '0.85rem', opacity: 0.8 }}>
+                  <Link
+                    to="/login"
+                    style={{
+                      color: '#fca5a5',
+                      textDecoration: 'underline',
+                      cursor: 'pointer',
+                      fontWeight: '500'
+                    }}
+                  >
+                    Log in to your account instead
+                  </Link>
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Success Message */}
+        {successMessage && (
+          <div style={{
+            background: 'rgba(74, 222, 128, 0.15)',
+            border: '1.5px solid rgba(74, 222, 128, 0.4)',
+            color: '#86efac',
+            padding: '1rem',
+            borderRadius: '0.875rem',
+            marginBottom: '1.5rem',
+            fontSize: '0.95rem',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '0.75rem',
+            backdropFilter: 'blur(10px)'
+          }}>
+            <CheckCircle size={20} style={{ flexShrink: 0, marginTop: '2px' }} />
+            <div>
+              <p style={{ margin: 0, fontWeight: '600' }}>
+                {successMessage}
+              </p>
+            </div>
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label htmlFor="username" style={{ color: '#0f172a' }}>Username</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Choose a username"
+              className="input-field"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              disabled={loading}
+            />
+            <p style={{ fontSize: '0.8rem', color: '#6b7280', margin: '0.25rem 0 0 0' }}>
+              This will be your unique profile name
+            </p>
+          </div>
+
+          <div className="mb-4">
+            <label htmlFor="email" style={{ color: '#0f172a' }}>Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="your@email.com"
+              className="input-field"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={loading}
+            />
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: '0.25rem 0 0 0' }}>
+              We'll use this to verify your account
+            </p>
+          </div>
+
+          <div className="mb-4">
+            <label htmlFor="password" style={{ color: '#0f172a' }}>Password</label>
+            <div style={{ position: 'relative' }}>
+              <input
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Create a strong password"
+                className="input-field"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                disabled={loading}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(s => !s)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                style={{
+                  position: 'absolute',
+                  right: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  color: 'var(--text-muted)'
+                }}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: '0.25rem 0 0 0' }}>
+              Use a strong password to keep your journal private.
+            </p>
+          </div>
+
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ width: '100%', marginTop: '1.5rem' }}
+            disabled={loading}
+          >
+            <UserPlus size={20} style={{ marginRight: '0.5rem' }} />
+            {loading ? 'Creating Account...' : 'Create Account'}
+          </button>
+        </form>
+
+        {/* Divider */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          margin: '1.5rem 0',
+          color: 'var(--text-muted)',
+          fontSize: '0.9rem'
+        }}>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(255, 255, 255, 0.1)' }} />
+          <span style={{ margin: '0 1rem' }}>Already registered?</span>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(255, 255, 255, 0.1)' }} />
+        </div>
+
+        <Link to="/login" style={{ textDecoration: 'none' }}>
+          <button type="button" className="btn btn-secondary" style={{ width: '100%' }}>
+            Go to Login
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Register;
