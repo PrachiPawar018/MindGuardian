@@ -777,7 +777,7 @@ const Support = ({ risk = 'low', recommendations = [] }) => {
               <HeartHandshake size={18} />
               <div>
                 <div className="contact-label">Peer Support</div>
-                <div className="contact-value">mindguardian1801@gmail.com</div>
+                <div className="contact-value">mindguardian2026@gmail.com</div>
               </div>
             </div>
           </motion.div>

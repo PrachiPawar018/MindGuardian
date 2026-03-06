@@ -78,7 +78,7 @@ const Terms = () => {
 
           <Section title="Contact Information" icon={Scale} delay={0.6} ariaLabel="Contact Information">
             <p>If you have any questions about these Terms, please contact us at:</p>
-            <p className="font-medium mt-2">mindguardian1801@gmail.com</p>
+            <p className="font-medium mt-2">mindguardian2026@gmail.com</p>
           </Section>
         </div>
 
